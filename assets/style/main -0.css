@@ -1,0 +1,101 @@
+  *{padding: 0; margin: 0;}
+  .abs{position: absolute;}
+  .rel{position: relative;}
+		body{
+			 background:url(../img/main_bg.png) no-repeat center top;overflow:hidden;
+			}
+        #carousel, #carousel .animate_box, #carousel .animate_box li.pane {   
+            padding: 0;
+            position: relative;
+			height:500px;
+            width: 500px;
+			margin:0 auto;		
+        }
+		#carousel{
+            margin-top:100px;
+            overflow: hidden;
+            -webkit-backface-visibility: hidden;
+            -webkit-transform: translate3d(0,0,0) scale3d(1,1,1);
+            -webkit-transform-style: preserve-3d;
+        }
+        #carousel .animate_box{
+            width: 500px;            
+            overflow: hidden;
+            -webkit-transform: translate3d(0%,0,0) scale3d(1,1,1);
+            -webkit-backface-visibility: hidden;
+            -webkit-transform-style: preserve-3d;
+            -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+            position: relative;
+        }
+        #carousel .animate_box.animate {
+            -webkit-transition: all .3s;
+            
+            
+        }
+		#carousel .animate_box li.pane{
+			width:500px;
+			-webkit-border-radius:100%;
+            overflow: hidden;
+            position:relative;
+            -webkit-transform-style: preserve-3d;
+            -webkit-transform: translate3d(0,0,0);
+		}
+
+        #carousel .animate_box li.pane .inner {
+            position: absolute;
+            font-size: 30px;
+            text-align: center;
+            top: 20px;
+            left: 0;
+            width: 468px;
+            height: 468px;
+            text-shadow: -1px -1px 0 rgba(0,0,0,.2);
+            -webkit-border-radius: 100%;
+        }
+
+        #carousel .animate_box li.pane1 { background:#f772c0; }
+        #carousel .animate_box li.pane2 { background:#ead548; }
+        #carousel .animate_box li.pane3 { background:#44da30; }
+        #carousel .animate_box li.pane4 { background:#0f88d4; }
+        #carousel .animate_box li.pane5 { background: #9fe1e7; }
+
+        .nav{ position: absolute;right: -30px;top: 233px;width: 100px;}
+        .nav_list{width: 100px;}
+        .nav_list li{text-indent: -999em;width: 8px; height: 8px; background:#50514d;-webkit-border-radius:100%; margin: 3px 0;}
+        .nav_list li.current{ background:#d9dad8;}
+        .nav_list.horizontal_nav li{ display: inline-block;margin-top: 3px 0;}
+
+        #carousel .mask_top{width: 500px; height: 77px; position:absolute;left:0;top:0; background: url(../img/mask_top.png) no-repeat center center;}
+      
+        #carousel .mask_mid_left{width:100px;height: 359px;position:absolute;left:0;top:77px;background: url(../img/mask_mid_l.png) no-repeat center center;}
+        #carousel .mask_mid_right{width:100px;height: 359px;position:absolute;right:0;top:77px;background: url(../img/mask_mid_r.png) no-repeat center center;}
+        #carousel .mask_ft{width:500px;height:64px;position:absolute;bottom:0;left:0;background: url(../img/mask_bottom.png) no-repeat center center;}
+    
+       
+        .msg_card{
+            width: 468px;
+            height: 468px;
+            -webkit-border-radius:100%;
+            background: #fff;
+            transition: all 0.3s;
+            outline: 1px solid transparent;           
+        }
+        .msg_card img{width: 100%;height: 300px;}
+        .msg_card.card1{            
+        }
+        .msg_card.card2{
+            background: #e9c95a;            
+        }
+        .msg_card.card3{
+            background: #d8a5e2;                       
+        }
+        .card_animate{ -webkit-animation: fadeInDown 1s linear 1 alternate;}
+        .card_animate.card_animate1{-webkit-animation: fadeInUp 1s linear 1 alternate;
+           // -webkit-transform:rotate(-10deg);
+             }
+        .card_animate.card_animate2{-webkit-animation: fadeInLeft 1s linear 1 alternate;
+            //-webkit-transform:rotate(10deg);
+        }
+        .card_animate.card_animate3{-webkit-animation: fadeIn 3s linear 1 alternate;
+            //-webkit-transform:rotate(15deg,15deg); 
+        }
